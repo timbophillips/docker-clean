@@ -7,7 +7,7 @@ simple bash script that:
 * stops all running containers
 * removes all containers
 * removes all volumes
-* (disabled by deafult) removes all images
+* (disabled by default) removes all images
 
 ```bash
 #!/bin/bash
