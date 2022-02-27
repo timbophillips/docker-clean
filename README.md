@@ -23,5 +23,19 @@ simple bash script to put a link into /usr/local/bin/
 ```bash
 #!/bin/bash
 SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+chmod 777 $SCRIPT_DIR/docker-clean
+chmod 777 $SCRIPT_DIR/nuclear-docker-clean
 ln $SCRIPT_DIR/docker-clean /usr/local/bin/
+ln $SCRIPT_DIR/nuclear-docker-clean /usr/local/bin/
+```
+
+### nuclear-docker-clean
+
+nuclear clean out of all docker state files, so use with care
+
+```bash
+#!/bin/bash
+sudo service docker stop
+sudo rm -r /var/lib/docker
+sudo service docker start
 ```
