@@ -37,3 +37,14 @@ sudo service docker stop
 sudo rm -r /var/lib/docker
 sudo service docker start
 ```
+
+### upgrade-apt-and-node
+
+shorthand for upgrading packages in ubuntu
+
+```bash
+#!/bin/bash
+sudo apt update
+sudo apt -yy dist-upgrade
+sudo apt -yy autoremove
+```
