@@ -18,13 +18,11 @@ docker volume ls -q | grep -q . && docker volume rm $(docker volume ls -q) || ec
 
 ```
 ### install
-simple bash script to put a link into /usr/local/bin/
+simple bash script to puts links into /usr/local/bin/
 
 ```bash
 #!/bin/bash
 SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
-chmod 777 $SCRIPT_DIR/docker-clean
-chmod 777 $SCRIPT_DIR/nuclear-docker-clean
 ln $SCRIPT_DIR/docker-clean /usr/local/bin/
 ln $SCRIPT_DIR/nuclear-docker-clean /usr/local/bin/
 ```
