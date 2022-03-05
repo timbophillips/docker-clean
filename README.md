@@ -22,9 +22,8 @@ simple bash script to puts links into /usr/local/bin/
 
 ```bash
 #!/bin/bash
-SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
-ln $SCRIPT_DIR/docker-clean /usr/local/bin/
-ln $SCRIPT_DIR/nuclear-docker-clean /usr/local/bin/
+REPO_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+ln -s $REPO_DIR/scripts/* /usr/local/bin/
 ```
 
 ### nuclear-docker-clean
