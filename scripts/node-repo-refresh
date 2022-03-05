@@ -1,0 +1,4 @@
+#!/bin/bash
+rm -r node_modules
+git pull
+npm install
