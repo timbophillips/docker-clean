@@ -23,7 +23,7 @@ simple bash script to puts links into /usr/local/bin/
 ```bash
 #!/bin/bash
 REPO_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
-ln -s $REPO_DIR/scripts/* /usr/local/bin/
+ln -sf $REPO_DIR/scripts/* /usr/local/bin/
 ```
 
 ### nuclear-docker-clean
