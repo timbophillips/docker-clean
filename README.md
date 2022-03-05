@@ -47,3 +47,15 @@ sudo apt update
 sudo apt -yy dist-upgrade
 sudo apt -yy autoremove
 ```
+
+### node-repo-refresh
+
+shorthand for refreshing repo from remote
+(useful when using multiple computers)
+
+```bash
+#!/bin/bash
+rm -r node_modules
+git pull
+npm install
+```
