@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "CPU $(($(</sys/class/thermal/thermal_zone0/temp)/1000)) C"
+gpu_temp="$(vcgencmd measure_temp | grep  -o -E '[[:digit:]].*')"
+printf "GPU %s\n" "$gpu_temp"
