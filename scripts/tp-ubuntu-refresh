@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sudo upgrade-apt
+
+nvm install node
+
+for folder in ~/code/*/
+    do
+        (echo $folder)
+        (cd "$folder" && node-repo-refresh)
+    done
