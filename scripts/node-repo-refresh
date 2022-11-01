@@ -1,4 +1,17 @@
 #!/bin/bash
-rm -r node_modules
-git pull
-npm install
+
+GITFILE=.git
+NODE_MODULES=node_modules
+
+echo "checking if $GITFILE exists"
+    if test -d "$GITFILE"; then
+        echo "$GITFILE exists... so refreshing"
+        git pull
+    fi
+
+echo "checking if $NODE_MODULES exits"
+    if test -d "$NODE_MODULES"; then
+        echo "$NODE_MODULES exists... so delete npm_modules and reinstall"
+        rm -r $NODE_MODULES
+        npm install
+    fi
