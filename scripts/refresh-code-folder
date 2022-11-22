@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for folder in $1/*; do
+    (echo $folder)
+    (cd "$folder" && node-repo-refresh)
+done
