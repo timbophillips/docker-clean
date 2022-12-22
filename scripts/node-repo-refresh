@@ -1,7 +1,7 @@
 #!/bin/bash
 
 GITFILE=.git
-PACKAGE.JSON=package.json
+PACKAGE_JSON=package.json
 NODE_MODULES=node_modules
 
 echo "checking if $GITFILE exists"
@@ -10,8 +10,8 @@ echo "checking if $GITFILE exists"
         git pull
     fi
 
-echo "checking if $PACKAGE.JSON exits"
-    if test -f "$PACKAGE.JSON"; then
+echo "checking if $PACKAGE_JSON exits"
+    if test -f "$PACKAGE_JSON"; then
         echo "package.json exists... so delete npm_modules and reinstall"
         rm -rf $NODE_MODULES
         npm install
