@@ -1,4 +1,5 @@
 #!/bin/bash
 sudo service docker stop
 sudo rm -r /var/lib/docker
+sudo rm -rf /var/lib/containerd
 sudo service docker start
