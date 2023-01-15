@@ -1,0 +1,9 @@
+#!/bin/bash
+echo 'adding any new files that have been created'
+git add .
+echo 'committing all changes with scripted message'
+git commit -a -m tjp-script
+echo 'pulling changes from the remote repo'
+git pull
+echo 'pushing changes to the remote repo'
+git push
