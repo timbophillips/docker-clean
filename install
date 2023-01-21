@@ -1,4 +1,10 @@
 #!/bin/bash
-git pull
+if [ -n "$SUDO_USER" ]; then
+    sudo -u "$SUDO_USER" sh -c 'git pull'
+else
+    git pull
+fi
+
+echo 'creating hard links to scripts in /user/local/bin/'
 REPO_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 sudo ln -sf $REPO_DIR/scripts/* /usr/local/bin/
