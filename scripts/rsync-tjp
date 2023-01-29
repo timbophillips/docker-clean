@@ -1,1 +1,1 @@
-rsync --protect-args --size-only -cavzPe ssh $1 $2 $3 $4 $5
+rsync --size-only -cavzPe ssh $1 $2 $3 $4 $5
