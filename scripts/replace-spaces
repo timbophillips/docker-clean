@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for f in *
+for f in $1/*
 do
   new="${f// /_}"
   if [ "$new" != "$f" ]
