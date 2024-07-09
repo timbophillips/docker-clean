@@ -1,0 +1,8 @@
+upgrade-apt
+export NVM_DIR=$HOME/.nvm;
+source $NVM_DIR/nvm.sh;
+nvm install node
+npm i -g npm
+cd ~/code/docker-clean
+git-sync
+refresh-code-folder ~/code/rewarda
