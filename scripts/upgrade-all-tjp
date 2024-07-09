@@ -5,4 +5,5 @@ nvm install node
 npm i -g npm
 cd ~/code/docker-clean
 git-sync
-refresh-code-folder ~/code/rewarda
+cd -
+refresh-code-folder $HOME/code/rewardapp
