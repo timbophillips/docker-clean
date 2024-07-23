@@ -1,11 +1,21 @@
 #!/bin/bash
+
 upgrade-apt
-export NVM_DIR=$HOME/.nvm;
-source $NVM_DIR/nvm.sh;
-nvm install node
-npm i -g npm
-cd ~/code/docker-clean
-git-sync
-cd -
-# change below for current projects
-refresh-code-folder $HOME/code/rewardapp
+
+node_stuff() {
+    export NVM_DIR=$HOME/.nvm
+    source $NVM_DIR/nvm.sh
+    nvm install node
+    npm i -g npm
+    cd ~/code/docker-clean
+    git-sync
+    cd -
+    # change below for current projects
+    refresh-code-folder $HOME/code/rewardappfi
+}
+
+if [ -n "$SUDO_USER" ]; then
+    sudo -u "$SUDO_USER" sh -c 'node_stuff'
+else
+    node_stuff
+fi
