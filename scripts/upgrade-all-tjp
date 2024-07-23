@@ -11,11 +11,11 @@ node_stuff() {
     git-sync
     cd -
     # change below for current projects
-    refresh-code-folder $HOME/code/rewardappfi
+    refresh-code-folder $HOME/code/rewardapp
 }
 
 if [ -n "$SUDO_USER" ]; then
-    sudo -u "$SUDO_USER" sh -c 'node_stuff'
+    echo "If this script is run as sudo then the nodeJS updates aren't performed"
 else
     node_stuff
 fi
