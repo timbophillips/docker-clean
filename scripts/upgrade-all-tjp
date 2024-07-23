@@ -7,4 +7,5 @@ npm i -g npm
 cd ~/code/docker-clean
 git-sync
 cd -
+# change below for current projects
 refresh-code-folder $HOME/code/rewardapp
