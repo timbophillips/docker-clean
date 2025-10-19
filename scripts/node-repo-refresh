@@ -14,6 +14,6 @@ echo "checking if $PACKAGE_JSON exits"
     if test -f "$PACKAGE_JSON"; then
         echo "package.json exists... so delete npm_modules and reinstall"
         rm -rf $NODE_MODULES
-        npm audit fix
+        npm audit fix --force
         npm install
     fi
